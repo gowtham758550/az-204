@@ -42,10 +42,9 @@ jobs:
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
-        working-directory: ./task-manager/client/dist
         with:
           name: node-app
-          path: release.zip
+          path: ./task-manager/client/dist/release.zip
 
   deploy:
     runs-on: ubuntu-latest
