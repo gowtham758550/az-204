@@ -37,7 +37,7 @@ jobs:
         working-directory: ./task-manager/client/dist
 
       - name: List dist contents
-        run: ls -l
+        run: pwd
         working-directory: ./task-manager/client/dist
 
       - name: Upload artifact for deployment job
