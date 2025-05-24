@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - 'task-manager/client/**'
+      - '.github/workflows/main_az-204-site.yml'
   workflow_dispatch:
 
 jobs:
@@ -70,7 +71,6 @@ jobs:
 
       - name: List dist contents
         run: pwd
-        working-directory: ./task-manager/client/dist
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
