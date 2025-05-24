@@ -36,10 +36,6 @@ jobs:
         run: zip release.zip ./* -r
         working-directory: ./task-manager/client/dist
 
-      - name: List dist contents
-        run: pwd
-        working-directory: ./task-manager/client/dist
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -71,6 +67,10 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E6D09B3C07B04C40A005B7F79510AFD4 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_584C3AE2A13F415BB9DC1978475A245B }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_38B7CDB6C1514C75B69AB1B49B8E98E0 }}
+
+      - name: List dist contents
+        run: pwd
+        working-directory: ./task-manager/client/dist
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
