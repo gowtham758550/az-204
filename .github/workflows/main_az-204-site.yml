@@ -70,7 +70,7 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_38B7CDB6C1514C75B69AB1B49B8E98E0 }}
 
       - name: List dist contents
-        run: pwd
+        run: ls
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
