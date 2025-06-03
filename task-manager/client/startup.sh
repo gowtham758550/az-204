@@ -1,3 +1,3 @@
 #!/bin/bash
 npm install serve
-npx serve -s /home/site/wwroot
+npx serve -s /home/site/wwwroot/client -l 8080
