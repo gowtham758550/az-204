@@ -31,6 +31,7 @@ jobs:
           npm install
           npm run production --if-present
           npm run test --if-present
+          cp startup.sh dist/client/
         working-directory: ./task-manager/client
 
       - name: Zip artifact for deployment
@@ -78,5 +79,5 @@ jobs:
         with:
           app-name: 'az-204-site'
           slot-name: 'Production'
-          package: ./client/browser
+          package: .
           
